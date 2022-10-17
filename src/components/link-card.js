@@ -12,8 +12,11 @@ border-radius: 12px;
 background-color: #FFFFFF;
 `
 
-export default function LinkCard() {
+export default function LinkCard(props) {
     return (
-        <Wrapper></Wrapper>
+        <Wrapper>
+            <div>Hello</div>
+            <h1>{props.shortLink}</h1>
+        </Wrapper>
     )
 }

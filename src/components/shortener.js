@@ -41,7 +41,7 @@ const LinkBtn = styled.button`
     font-size: 20px;
 `
 
-export default function Shortener() {
+export default function Shortener(props) {
 
     function validURL(str) {
         let pattern = new RegExp('^(https?:\\/\\/)?'+ // protocol
@@ -65,7 +65,7 @@ export default function Shortener() {
         if (validURL(link)) {
             fetch(`https://api.shrtco.de/v2/shorten?url=${link}`)
             .then((response) => response.json())
-            .then((data) => console.log(data.result.short_link));
+            .then((data) => props.setShort((current) => [...current, data.result.short_link]));
         }
         else {
             console.log("Please enter a valid URL")
