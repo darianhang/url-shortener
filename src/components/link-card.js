@@ -6,7 +6,7 @@ const Wrapper = styled.div`
     display: flex;
     flex-direction: column;
     width: 85%;
-    height: 150px;
+    height: 160px;
     margin: 5% auto 5% auto;
     border-radius: 12px;
     background-color: #FFFFFF;
@@ -20,7 +20,7 @@ const LinkWrapper = styled.div`
     height: 80px;
     margin: 0 auto 0 auto;
     border-radius: 12px 12px 0 0;
-    border-bottom: 1px solid #808080;
+    border-bottom: 1px solid #d9d9d9;
 `
 
 const ShortLinkWrapper = styled.div`
