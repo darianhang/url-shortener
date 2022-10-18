@@ -3,6 +3,7 @@ import NavBar from './components/nav-bar';
 import Hero from './components/hero';
 import Shortener from './components/shortener';
 import LinkCard from './components/link-card';
+import InfoBody from './components/info-body';
 import React from 'react';
 
 const Wrapper = styled.div`
@@ -27,10 +28,12 @@ function App() {
         {shortLinks.map((x) => {
           return (
             <LinkCard
-              shortLink={x}
+              ogLink={x.longLink}
+              shortLink={x.shortLink}
             />
           )
         })}
+        <InfoBody />
       </Wrapper>
     </div>
   );

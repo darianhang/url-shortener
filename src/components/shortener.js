@@ -65,7 +65,7 @@ export default function Shortener(props) {
         if (validURL(link)) {
             fetch(`https://api.shrtco.de/v2/shorten?url=${link}`)
             .then((response) => response.json())
-            .then((data) => props.setShort((current) => [...current, data.result.short_link]));
+            .then((data) => props.setShort((current) => [...current, {shortLink: data.result.short_link, longLink: link}]));
         }
         else {
             console.log("Please enter a valid URL")

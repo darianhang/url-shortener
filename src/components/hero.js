@@ -13,8 +13,8 @@ const HeroWrapper = styled.div`
 `
 
 const HeroImg = styled.img`
- width: 150%;
- padding: 10%;
+    width: 150%;
+    padding: 10%;
 `
 
 const HeroTitle = styled.h1`
