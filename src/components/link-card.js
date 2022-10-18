@@ -54,11 +54,47 @@ const CopyBtn = styled.button`
     margin: 3% auto 0 auto;
     background-color: hsl(180, 66%, 49%);
     color: #FFFFFF;
-    font-size: 20px;
+    font-size: 16px;
     font-weight: 600;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    vertical-align: baseline;
+    -webkit-transition: 0.1s;
+    -moz-transition: 0.1s;
+    -o-transition: 0.1s;
+    transition: 0.1s;
+
+&:hover,
+&:focus {
+  border-color: rgba(0, 0, 0, 0.15);
+  box-shadow: rgba(0, 0, 0, 0.1) 0 4px 12px;    
+}
+
+&:active {
+  background-color: hsl(257, 27%, 26%);
+  border-color: rgba(0, 0, 0, 0.15);
+  box-shadow: rgba(0, 0, 0, 0.06) 0 2px 4px;
+  transform: translateY(0);
+}
 `
 
 export default function LinkCard(props) {
+
+    const [buttonText, setButtonText] = React.useState("Copy")
+
+    function changeBtnText(text) {
+        setButtonText(text)
+    }
+
+    function copyToClipboard() {
+        navigator.clipboard.writeText(props.shortLink)
+        changeBtnText("Copied!")
+        setTimeout(() => {
+            changeBtnText("Copy");
+          }, 1500); // 👈️ change text back after 1 second
+        }
+    
+    
     return (
         <Wrapper>
             <LinkWrapper>
@@ -66,7 +102,7 @@ export default function LinkCard(props) {
             </LinkWrapper>
             <ShortLinkWrapper>
                 <ShortLink>{props.shortLink}</ShortLink>
-                <CopyBtn>Copy</CopyBtn>
+                <CopyBtn onClick={() => copyToClipboard()}>{buttonText}</CopyBtn>
             </ShortLinkWrapper>
         </Wrapper>
     )
