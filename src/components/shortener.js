@@ -74,7 +74,7 @@ export default function Shortener(props) {
 
     return (
         <Wrapper>
-            <LinkInput value={link} onChange={(e) => setLink(e.target.value)}></LinkInput>
+            <LinkInput placeholder='Shorten a link here...' value={link} onChange={(e) => setLink(e.target.value)}></LinkInput>
             <LinkBtn onClick={() => shorten(link)}>Shorten It!</LinkBtn>
         </Wrapper>
     )
