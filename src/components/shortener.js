@@ -14,10 +14,19 @@ const Wrapper = styled.div`
     background-position: center;
     background-size: cover;
 `
+
+const InputWarpper = styled.div`
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100px;
+
+`
+
 const LinkInput = styled.input`
     width: 80%;
-    height: 25%;
-    margin: 10% auto 5% auto;
+    height: 50px;
+    margin: 10% auto 1.5% auto;
     border: none;
     border-radius: 5px;
     font-size: 20px;
@@ -31,7 +40,7 @@ const LinkInput = styled.input`
 
 const LinkBtn = styled.button`
     width: 80%;
-    height: 25%;
+    height: 50px;
     margin: 5% auto 10% auto;
     border: none;
     border-radius: 5px;
@@ -61,6 +70,13 @@ const LinkBtn = styled.button`
 }
 `
 
+const UrlAlert = styled.p`
+    color: hsl(0, 87%, 67%);
+    font-weight: 400;
+    padding-left: 11%;
+    font-size: 14px;
+`
+
 export default function Shortener(props) {
 
     function validURL(str) {
@@ -74,27 +90,36 @@ export default function Shortener(props) {
       }
 
     const [link, setLink] = React.useState("")
+    const [urlAlert, setUrlAlert] = React.useState("")
 
-    function poop() {
-        console.log(link)
-        console.log(validURL(link))
+    function Alert(err) {
+        setUrlAlert(err)
     }
 
     function shorten(link) {
         console.log(link)
         if (validURL(link)) {
             fetch(`https://api.shrtco.de/v2/shorten?url=${link}`)
-            .then((response) => response.json())
-            .then((data) => props.setShort((current) => [...current, {shortLink: data.result.short_link, longLink: link}]));
-        }
+            .then((response) => {
+                if (response.ok) {
+                    Alert("")
+                    return response.json();
+                  }
+                  throw new Error('Something went wrong');
+                })  .then((data) => props.setShort((current) => [...current, {shortLink: data.result.short_link, longLink: link}]));
+            }
         else {
             console.log("Please enter a valid URL")
+            Alert("Please enter a valid URL")
         }
     }
 
     return (
         <Wrapper>
-            <LinkInput placeholder='Shorten a link here...' value={link} onChange={(e) => setLink(e.target.value)}></LinkInput>
+            <InputWarpper>
+                <LinkInput placeholder='Shorten a link here...' value={link} onChange={(e) => setLink(e.target.value)}></LinkInput>
+                <UrlAlert>{urlAlert}</UrlAlert>
+            </InputWarpper>
             <LinkBtn onClick={() => shorten(link)}>Shorten It!</LinkBtn>
         </Wrapper>
     )
