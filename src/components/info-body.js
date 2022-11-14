@@ -35,6 +35,16 @@ export default function InfoBody() {
                 header="Brand Recognition"
                 footer="Boost your brand recognition with each click. Generic links don't mean a thing. Branded links help instil confidence in your content."
             />
+            <Card 
+                badge={badgeOne}
+                header="Detailed Records"
+                footer="Gain insights into who  is clicking your links. Knowing when and where people engage with your content helps inform better decisions."
+            />
+            <Card 
+                badge={badgeOne}
+                header="Fully Customizable"
+                footer="Improve brand awareness and content discoverability through customizable links, supercharging audience engagement."
+            />
         </Wrapper>
     )
 }

@@ -11,6 +11,7 @@ const Wrapper = styled.div`
     padding: 5%;
     border-radius: 15px;
     margin-top: 15%;
+    margin-bottom: 15%;
 `
 
 const Header = styled.h2`

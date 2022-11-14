@@ -5,6 +5,8 @@ import Shortener from './components/shortener';
 import LinkCard from './components/link-card';
 import InfoBody from './components/info-body';
 import React from 'react';
+import ActionCall from './components/action-call';
+import Footer from './components/footer';
 
 const Wrapper = styled.div`
   background-image: linear-gradient(#efefef, #efefef);
@@ -34,6 +36,8 @@ function App() {
           )
         })}
         <InfoBody />
+        <ActionCall />
+        <Footer />
       </Wrapper>
     </div>
   );
