@@ -7,7 +7,7 @@ const Wrapper = styled.div`
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
-    width: 85%;
+    width: 82%;
     height: 220px;
     margin: 20% auto 5% auto;
     border-radius: 12px;
@@ -17,7 +17,7 @@ const Wrapper = styled.div`
     background-size: cover;
 
     @media screen and (min-width: 600px) {
-        margin: 2% auto 5% auto;
+        margin: 2% auto 3% auto;
         height: 150px;
         flex-direction: row;
         align-items: center;
@@ -34,8 +34,8 @@ const InputWarpper = styled.div`
         position: relative;
         height: 100%;
         justify-content: center;
-        width: 58vw;
         margin: 0 2% 0 0;
+        padding: 0 0 0 50px;
 }
 `
 
@@ -95,6 +95,8 @@ const LinkBtn = styled.button`
     margin: 0 0 0 0;
     width: 20%;
     height: 50px;
+    margin-right: 50px;
+    font-size: 1.5vw;
 }
 `
 

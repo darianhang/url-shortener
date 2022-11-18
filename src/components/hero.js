@@ -14,8 +14,8 @@ const HeroWrapper = styled.div`
         flex-direction: row-reverse;
         justify-content: space-between;
         margin: 5% 0 0 0;
-        padding-top: 5%;
-        height: 40vw;
+        padding: 10% 0 0 0;
+        height: 45vw;
 }
 `
 
@@ -40,10 +40,11 @@ const HeroImgWrapper = styled.div`
 `
 
 const HeroImg = styled.img`
+    height: 80vw;
 @media screen and (min-width: 600px) {
     position: absolute;
     height: 35vw;
-    top: -40px;
+    top: -6vw;
     right: -15vw;
 }
 `

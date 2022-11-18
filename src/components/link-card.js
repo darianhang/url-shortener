@@ -5,11 +5,16 @@ import React from 'react';
 const Wrapper = styled.div`
     display: flex;
     flex-direction: column;
-    width: 85%;
+    width: 82%;
     height: 160px;
     margin: 5% auto 5% auto;
     border-radius: 12px;
     background-color: #FFFFFF;
+    @media screen and (min-width: 600px) {
+        height: 80px;
+        flex-direction: row;
+        margin: 2% auto 2% auto;
+}
 `
 
 const LinkWrapper = styled.div`
@@ -21,6 +26,10 @@ const LinkWrapper = styled.div`
     margin: 0 auto 0 auto;
     border-radius: 12px 12px 0 0;
     border-bottom: 1px solid #d9d9d9;
+    @media screen and (min-width: 600px) {
+        border-bottom: none;
+        height: 100%
+}
 `
 
 const ShortLinkWrapper = styled.div`
@@ -30,6 +39,12 @@ const ShortLinkWrapper = styled.div`
     width: 100%;
     height: 100%;
     margin: 0 auto 0 auto;
+    @media screen and (min-width: 600px) {
+        flex-direction: row;
+        justify-content: flex-end;
+        align-items: center;
+        margin: auto 25px auto 0;
+}
 `
 
 const OgLink = styled.div`
@@ -37,6 +52,9 @@ const OgLink = styled.div`
     font-weight: 600;
     color: hsl(260, 8%, 14%);
     font-size: 16px;
+    @media screen and (min-width: 600px) {
+    margin: auto 0 auto 25px;
+}
 `
 
 const ShortLink = styled.div`
@@ -44,6 +62,9 @@ const ShortLink = styled.div`
     font-weight: 600;
     color: hsl(180, 66%, 49%);
     font-size: 16px;
+    @media screen and (min-width: 600px) {
+    margin: 0 5% 0 0;
+}
 `
 
 const CopyBtn = styled.button`
@@ -75,6 +96,12 @@ const CopyBtn = styled.button`
   border-color: rgba(0, 0, 0, 0.15);
   box-shadow: rgba(0, 0, 0, 0.06) 0 2px 4px;
   transform: translateY(0);
+  
+}
+
+@media screen and (min-width: 600px) {
+    margin: 0;
+    width: 20%;
 }
 `
 
