@@ -9,6 +9,13 @@ const Wrapper = styled.div`
     height: 100%;
     margin-bottom: 15%;
     background-color: hsl(260, 8%, 14%);
+
+    @media screen and (min-width: 600px) {
+        flex-direction: row;
+        align-items: flex-start;
+        justify-content: space-around;
+        padding: 5% 0 0 0;
+}
 `
 
 const Logo = styled.img`
@@ -16,6 +23,10 @@ const Logo = styled.img`
     width: 30%;
     margin-bottom: 15%;
     margin-top: 15%;
+    @media screen and (min-width: 600px) {
+        width: 10%;
+        margin: 0;
+}
 `
 
 const LinkContainer = styled.div`
@@ -27,6 +38,9 @@ const Header = styled.h2`
     font-size: 1.1rem;
     color: #ffffff;
     margin-bottom: 15%;
+    @media screen and (min-width: 600px) {
+        text-align: left;
+}
 `
 
 const Link = styled.a`
@@ -35,6 +49,9 @@ const Link = styled.a`
     font-size: 1rem;
     color: #ffffff;
     margin-bottom: 15%;
+    @media screen and (min-width: 600px) {
+        text-align: left;
+}
 `
 
 export default function Footer(props) {

@@ -79,7 +79,7 @@ const HeroSubtitle = styled.h3`
 
 const HeroBtn = styled.button`
     border: none;
-    border-radius: 32px;
+    border-radius: 50px;
     width: 50%;
     height: 60px;
     margin: 0 auto 0 auto;

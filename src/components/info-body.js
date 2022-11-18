@@ -6,7 +6,7 @@ const Wrapper = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: 80px 0 5% 0;
+    margin: 80px 0 0 0;
 `
 
 const Header = styled.h2`
@@ -34,26 +34,41 @@ const SubHeader = styled.h3`
 }
 `
 
+const CardContainer = styled.div`
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 0 5% 0;
+    @media screen and (min-width: 600px) {
+        width: 82%;
+        height: 100%;
+        flex-direction: row;
+        justify-content: space-between;
+}
+`
+
 export default function InfoBody() {
     return (
         <Wrapper>
             <Header>Advanced Statistics</Header>
             <SubHeader>Track how your links are performing across the web with our advanced statistics dashboard</SubHeader>
-            <Card 
-                badge={badgeOne}
-                header="Brand Recognition"
-                footer="Boost your brand recognition with each click. Generic links don't mean a thing. Branded links help instil confidence in your content."
-            />
-            <Card 
-                badge={badgeOne}
-                header="Detailed Records"
-                footer="Gain insights into who  is clicking your links. Knowing when and where people engage with your content helps inform better decisions."
-            />
-            <Card 
-                badge={badgeOne}
-                header="Fully Customizable"
-                footer="Improve brand awareness and content discoverability through customizable links, supercharging audience engagement."
-            />
+            <CardContainer>
+                <Card 
+                    badge={badgeOne}
+                    header="Brand Recognition"
+                    footer="Boost your brand recognition with each click. Generic links don't mean a thing. Branded links help instil confidence in your content."
+                />
+                <Card 
+                    badge={badgeOne}
+                    header="Detailed Records"
+                    footer="Gain insights into who  is clicking your links. Knowing when and where people engage with your content helps inform better decisions."
+                />
+                <Card 
+                    badge={badgeOne}
+                    header="Fully Customizable"
+                    footer="Improve brand awareness and content discoverability through customizable links, supercharging audience engagement."
+                />
+            </CardContainer>
         </Wrapper>
     )
 }

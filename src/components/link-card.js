@@ -63,7 +63,7 @@ const ShortLink = styled.div`
     color: hsl(180, 66%, 49%);
     font-size: 16px;
     @media screen and (min-width: 600px) {
-    margin: 0 5% 0 0;
+    margin: 0 2.5% 0 0;
 }
 `
 

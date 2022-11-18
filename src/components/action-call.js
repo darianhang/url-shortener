@@ -10,6 +10,10 @@ const Wrapper = styled.div`
     background-image: url(${mobilebg});
     background-position: center;
     background-size: cover;
+    @media screen and (min-width: 600px) {
+
+}
+    
 `
 
 const Header = styled.h2`
@@ -19,6 +23,10 @@ const Header = styled.h2`
     font-size: 1.5rem;
     color: #ffffff;
     margin-bottom: 5%;
+    @media screen and (min-width: 600px) {
+        font-size: 2rem;
+        margin: 0 0 2% 0;
+}
 `
 
 const HeroBtn = styled.button`
@@ -31,6 +39,9 @@ const HeroBtn = styled.button`
     color: #FFFFFF;
     font-size: 20px;
     font-weight: 600;
+    @media screen and (min-width: 600px) {
+        width: 200px;
+}
 `
 
 export default function ActionCall(props) {

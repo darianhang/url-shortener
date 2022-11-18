@@ -10,8 +10,13 @@ const Wrapper = styled.div`
     height: 260px;
     padding: 5%;
     border-radius: 15px;
-    margin-top: 15%;
-    margin-bottom: 15%;
+    margin-top: 10%;
+    margin-bottom: 10%;
+    @media screen and (min-width: 600px) {
+        width: 25vw;
+        height: 18vw;
+        margin: 12% 0 5% 0;
+}
 `
 
 const Header = styled.h2`
@@ -21,6 +26,10 @@ const Header = styled.h2`
     font-size: 5vw;
     color: hsl(260, 8%, 14%);
     margin-top: 15%;
+    @media screen and (min-width: 600px) {
+        font-size: 1.5vw;
+        text-align: left;
+}
 `
 
 const SubHeader = styled.h3`
@@ -29,7 +38,12 @@ const SubHeader = styled.h3`
     font-weight: 600;
     width: 95%;
     margin: 5% auto 0 auto;
-    color: hsl(257, 7%, 63%)
+    color: hsl(257, 7%, 63%);
+    @media screen and (min-width: 600px) {
+        font-size: 1vw;
+        text-align: left;
+        margin: 5% 0 0 0
+}
 `
 
 const BadgeWrapper = styled.div`
@@ -47,6 +61,12 @@ const BadgeWrapper = styled.div`
     background-color: hsl(257, 27%, 26%);
     border-radius: 50%;
     margin: auto;
+    @media screen and (min-width: 600px) {
+        width: 6vw;
+        height: 6vw;
+        top: -3vw;
+        right: 12vw;
+}
 `
 
 const Badge = styled.img`
