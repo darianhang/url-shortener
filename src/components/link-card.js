@@ -10,9 +10,12 @@ const Wrapper = styled.div`
     margin: 5% auto 5% auto;
     border-radius: 12px;
     background-color: #FFFFFF;
+    padding: 5px;
     @media screen and (min-width: 600px) {
+        padding: 0;
         height: 80px;
         flex-direction: row;
+        justify-content: space-between;
         margin: 2% auto 2% auto;
 }
 `
@@ -27,8 +30,12 @@ const LinkWrapper = styled.div`
     border-radius: 12px 12px 0 0;
     border-bottom: 1px solid #d9d9d9;
     @media screen and (min-width: 600px) {
+        justify-content: flex-start;
+        align-items: flex-start;
+        margin: 0;
         border-bottom: none;
-        height: 100%
+        height: 100%;
+        overflow: hidden;
 }
 `
 
@@ -40,20 +47,26 @@ const ShortLinkWrapper = styled.div`
     height: 100%;
     margin: 0 auto 0 auto;
     @media screen and (min-width: 600px) {
+        width: 250px;
         flex-direction: row;
         justify-content: flex-end;
         align-items: center;
-        margin: auto 25px auto 0;
+        margin: auto 25px auto 5%;
 }
 `
 
 const OgLink = styled.div`
-    margin-left: 5%;
+    margin: 0 5% 0 5%;
     font-weight: 600;
     color: hsl(260, 8%, 14%);
     font-size: 16px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
     @media screen and (min-width: 600px) {
     margin: auto 0 auto 25px;
+    width: 95%;
+    text-overflow: ellipsis;
 }
 `
 
@@ -63,7 +76,7 @@ const ShortLink = styled.div`
     color: hsl(180, 66%, 49%);
     font-size: 16px;
     @media screen and (min-width: 600px) {
-    margin: 0 2.5% 0 0;
+        margin: 0 5% 0 0;
 }
 `
 
@@ -101,7 +114,7 @@ const CopyBtn = styled.button`
 
 @media screen and (min-width: 600px) {
     margin: 0;
-    width: 20%;
+    width: 80px;
 }
 `
 
