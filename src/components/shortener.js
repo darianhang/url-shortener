@@ -13,6 +13,14 @@ const Wrapper = styled.div`
     background-image: url(${mobilebg});
     background-position: center;
     background-size: cover;
+
+    @media screen and (min-width: 500px) {
+        margin: 5% auto 5% auto;
+        height: 150px;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+}
 `
 
 const InputWarpper = styled.div`
@@ -20,6 +28,13 @@ const InputWarpper = styled.div`
     flex-direction: column;
     width: 100%;
     height: 100px;
+    @media screen and (min-width: 500px) {
+        position: relative;
+        height: 100%;
+        justify-content: center;
+        width: 70%;
+        margin: 0 2% 0 0;
+}
 
 `
 
@@ -36,6 +51,12 @@ const LinkInput = styled.input`
         outline-style: solid;
     }
     padding: 5%;
+    @media screen and (min-width: 500px) {
+        margin: 0 5% 0 0;
+        width: 100%;
+        height: 50px;
+        padding: 0 0 0 5%;
+}
 `
 
 const LinkBtn = styled.button`
@@ -68,6 +89,12 @@ const LinkBtn = styled.button`
   color: rgba(0, 0, 0, 0.65);
   transform: translateY(0);
 }
+
+@media screen and (min-width: 500px) {
+    margin: 0 0 0 0;
+    width: 20%;
+    height: 50px;
+}
 `
 
 const UrlAlert = styled.p`
@@ -75,6 +102,12 @@ const UrlAlert = styled.p`
     font-weight: 400;
     padding-left: 11%;
     font-size: 14px;
+    @media screen and (min-width: 500px) {
+    position: absolute;
+    top: 110px;
+    left: -6.5vw
+}
+    
 `
 
 export default function Shortener(props) {
