@@ -29,13 +29,14 @@ const InputWarpper = styled.div`
     display: flex;
     flex-direction: column;
     width: 100%;
-    height: 60px;
+    height: 50px;
     @media screen and (min-width: 600px) {
         position: relative;
-        height: 100%;
+        width: 100%;
+        height: 50px;
         justify-content: center;
         margin: 0 2% 0 0;
-        padding: 0 0 0 50px;
+        padding: 0 0 0 5%;
 }
 `
 
@@ -53,10 +54,10 @@ const LinkInput = styled.input`
     }
     padding: 5%;
     @media screen and (min-width: 600px) {
-        margin: 0 5% 0 0;
-        width: 100%;
-        height: 50px;
         padding: 0 0 0 5%;
+        width: 100%;
+        height: 100px;
+        margin: 0;
 }
 `
 
@@ -108,8 +109,8 @@ const UrlAlert = styled.p`
     @media screen and (min-width: 600px) {
     position: absolute;
     padding-top: 0;
-    top: 110px;
-    left: -4vw;
+    top: 60px;
+    left: -2.8vw;
 }
     
 `
