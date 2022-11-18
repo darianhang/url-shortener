@@ -107,7 +107,7 @@ const UrlAlert = styled.p`
     position: absolute;
     padding-top: 0;
     top: 110px;
-    left: -6.5vw;
+    left: -6.3vw;
 }
     
 `
