@@ -26,7 +26,7 @@ const Header = styled.h2`
 const SubHeader = styled.h3`
     font-size: 1em;
     text-align: center;
-    font-weight: 500;
+    font-weight: 600;
     width: 95%;
     margin: 5% auto 0 auto;
     color: hsl(257, 7%, 63%)

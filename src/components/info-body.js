@@ -6,7 +6,7 @@ const Wrapper = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 80px;
+    margin: 80px 0 5% 0;
 `
 
 const Header = styled.h2`
@@ -15,13 +15,14 @@ const Header = styled.h2`
     line-height: 130%;
     font-size: 8vw;
     color: hsl(260, 8%, 14%);
+    margin: 0 0 0 0;
 `
 
 const SubHeader = styled.h3`
     text-align: center;
     font-weight: 500;
     width: 320px;
-    margin: 5% auto 8% auto;
+    margin: 5% auto 15% auto;
     color: hsl(257, 7%, 63%)
 `
 

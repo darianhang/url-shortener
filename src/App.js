@@ -12,7 +12,7 @@ import useWindowSize from './utils/window-size';
 const Wrapper = styled.div`
   background-image: linear-gradient(#efefef, #efefef);
   background-position: 0 100px;
-  @media screen and (min-width: 500px) {
+  @media screen and (min-width: 600px) {
     background-position: 0 65px;
 }
 `

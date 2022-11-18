@@ -5,8 +5,10 @@ import React from 'react';
 const Wrapper = styled.div`
     display: flex;
     flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
     width: 85%;
-    height: 200px;
+    height: 220px;
     margin: 20% auto 5% auto;
     border-radius: 12px;
     background-color: hsl(257, 27%, 26%);
@@ -14,7 +16,7 @@ const Wrapper = styled.div`
     background-position: center;
     background-size: cover;
 
-    @media screen and (min-width: 500px) {
+    @media screen and (min-width: 600px) {
         margin: 5% auto 5% auto;
         height: 150px;
         flex-direction: row;
@@ -27,21 +29,20 @@ const InputWarpper = styled.div`
     display: flex;
     flex-direction: column;
     width: 100%;
-    height: 100px;
-    @media screen and (min-width: 500px) {
+    height: 60px;
+    @media screen and (min-width: 600px) {
         position: relative;
         height: 100%;
         justify-content: center;
-        width: 70%;
+        width: 58vw;
         margin: 0 2% 0 0;
 }
-
 `
 
 const LinkInput = styled.input`
     width: 80%;
-    height: 50px;
-    margin: 10% auto 1.5% auto;
+    height: 60px;
+    margin: 0 auto 1.5% auto;
     border: none;
     border-radius: 5px;
     font-size: 20px;
@@ -51,7 +52,7 @@ const LinkInput = styled.input`
         outline-style: solid;
     }
     padding: 5%;
-    @media screen and (min-width: 500px) {
+    @media screen and (min-width: 600px) {
         margin: 0 5% 0 0;
         width: 100%;
         height: 50px;
@@ -61,8 +62,8 @@ const LinkInput = styled.input`
 
 const LinkBtn = styled.button`
     width: 80%;
-    height: 50px;
-    margin: 5% auto 10% auto;
+    height: 25%;
+
     border: none;
     border-radius: 5px;
     background-color: hsl(180, 66%, 49%);
@@ -90,7 +91,7 @@ const LinkBtn = styled.button`
   transform: translateY(0);
 }
 
-@media screen and (min-width: 500px) {
+@media screen and (min-width: 600px) {
     margin: 0 0 0 0;
     width: 20%;
     height: 50px;
@@ -100,12 +101,13 @@ const LinkBtn = styled.button`
 const UrlAlert = styled.p`
     color: hsl(0, 87%, 67%);
     font-weight: 400;
-    padding-left: 11%;
+    padding: 0.5% 0 0 11%;
     font-size: 14px;
-    @media screen and (min-width: 500px) {
+    @media screen and (min-width: 600px) {
     position: absolute;
+    padding-top: 0;
     top: 110px;
-    left: -6.5vw
+    left: -6.5vw;
 }
     
 `

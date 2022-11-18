@@ -10,7 +10,7 @@ const NavigationBar = styled.div`
 
 const Logo = styled.img`
     padding: 30px 0 0 30px;
-    @media screen and (min-width: 500px) {
+    @media screen and (min-width: 600px) {
         padding: 50px 0 0 10vw
 }
 `
@@ -23,7 +23,7 @@ export default function NavBar(props) {
     return (
         <NavigationBar>
             <Logo src={logo}></Logo>
-            {props.windowSize.width < 500 ?
+            {props.windowSize.width < 600 ?
                 <Hamburger>
                 <input className="checkbox" type="checkbox" name="" id="" />
                 <div className="hamburger-lines">

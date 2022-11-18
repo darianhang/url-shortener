@@ -41,7 +41,7 @@ const OgLink = styled.div`
 
 const ShortLink = styled.div`
     margin-left: 5%;
-    font-weight: 500;
+    font-weight: 600;
     color: hsl(180, 66%, 49%);
     font-size: 16px;
 `
@@ -91,7 +91,7 @@ export default function LinkCard(props) {
         changeBtnText("Copied!")
         setTimeout(() => {
             changeBtnText("Copy");
-          }, 1500); // 👈️ change text back after 1 second
+          }, 1600); // 👈️ change text back after 1 second
         }
     
     
