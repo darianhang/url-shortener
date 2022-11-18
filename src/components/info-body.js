@@ -16,6 +16,9 @@ const Header = styled.h2`
     font-size: 8vw;
     color: hsl(260, 8%, 14%);
     margin: 0 0 0 0;
+    @media screen and (min-width: 600px) {
+        font-size: 3vw;
+}
 `
 
 const SubHeader = styled.h3`
@@ -23,7 +26,12 @@ const SubHeader = styled.h3`
     font-weight: 500;
     width: 320px;
     margin: 5% auto 15% auto;
-    color: hsl(257, 7%, 63%)
+    color: hsl(257, 7%, 63%);
+    @media screen and (min-width: 600px) {
+        font-size: 1.8vw;
+        margin: 2% auto 0 auto;
+        width: 50%;
+}
 `
 
 export default function InfoBody() {

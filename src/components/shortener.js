@@ -17,7 +17,7 @@ const Wrapper = styled.div`
     background-size: cover;
 
     @media screen and (min-width: 600px) {
-        margin: 5% auto 5% auto;
+        margin: 2% auto 5% auto;
         height: 150px;
         flex-direction: row;
         align-items: center;
